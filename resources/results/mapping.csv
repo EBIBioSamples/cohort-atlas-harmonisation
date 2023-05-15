@@ -1,0 +1,477 @@
+,TERM,DESCRIPTION,PARENT,FEATURE,CLASS
+0,Person skood,SKOOD,Person,skood,genomics
+1,Person gender,Gender,Person,gender,gender
+2,Person birthDate,Birthdate,Person,birthdate,age/birthdate
+3,Person birthYear,Year of birth,Person,year birth,genomics
+4,Person agreementDate,Agreement date,Person,agreement date,date and time-related information
+5,Person ageToday,Age at present,Person,age present,age/birthdate
+6,Person ageAtAgreement,Age at the agreement date,Person,age agreement date,age/birthdate
+7,Person ageGroupAtAgreement,,Person,,genomics
+8,Person deathDate,Date of death,Person,date death,cause of death
+9,Person deathYear,Year of death,Person,year death,cause of death
+10,PersonPortrait lastBmi,Last BMI value,PersonPortrait,last bmi value,personal beliefs and values
+11,PersonPortrait lastWeight,Last weight value,PersonPortrait,last weight value,weight
+12,PersonPortrait lastHeight,Last height value,PersonPortrait,last height value,height
+13,PersonPortrait bmiDate,"The date of last weight, height and BMI measurement",PersonPortrait,"date last weight, height bmi measurement",weight
+14,PersonPortrait bmiSource,Last bmi value source,PersonPortrait,last bmi value source,personal beliefs and values
+15,PersonPortrait lastSmokingStatus,Last smoking status,PersonPortrait,last smoking status,marital status
+16,PersonPortrait smokingDate,Date of last smoking report,PersonPortrait,date last smoking report,date and time-related information
+17,PersonPortrait smokingSource,Last smoking status source,PersonPortrait,last smoking status source,marital status
+18,PersonPortrait lastAlcoholStatus,Last status of alcohol consumption,PersonPortrait,last status alcohol consumption,marital status
+19,PersonPortrait lastAlcoholStyle,Alcohol consumption habits,PersonPortrait,alcohol consumption habit,alcohol use history
+20,PersonPortrait alcoholUnitPerDay,Daily alcohol consumption during the last year (1 unit = 10 g of pure alcohol),PersonPortrait,daily alcohol consumption last year unit g pure alcohol,alcohol use history
+21,PersonPortrait alcoholDate,Date of last report of alcohol consumption,PersonPortrait,date last report alcohol consumption,alcohol use history
+22,PersonPortrait nationality,Nationality,PersonPortrait,nationality,genomics
+23,PersonPortrait lastEducation,Last education,PersonPortrait,last education,education
+24,PersonPortrait educationDate,The date of the last education,PersonPortrait,date last education,education
+25,PersonPortrait educationSource,Last education source,PersonPortrait,last education source,education
+26,PersonPortrait residencyCountry,Country of residence,PersonPortrait,country residence,residence
+27,PersonPortrait residencyRegion,County of residence,PersonPortrait,county residence,residence
+28,PersonPortrait residencyCity,City of residence,PersonPortrait,city residence,residence
+29,PersonPortrait settlementRegionType,Settlement region type,PersonPortrait,settlement region type,other biosample type
+30,DiagnosisConsolidated icd10,,DiagnosisConsolidated,,genomics
+31,DiagnosisConsolidated earliestDate,,DiagnosisConsolidated,,genomics
+32,DiagnosisConsolidated latestDate,,DiagnosisConsolidated,,genomics
+33,Sample vkood,,Sample,,genomics
+34,Sample visitNumber,,Sample,,genomics
+35,InformedConsent icType,,InformedConsent,,genomics
+36,InformedConsent icDate,,InformedConsent,,genomics
+37,InformedConsent validTo,,InformedConsent,,genomics
+38,InformedConsent feedbackType,,InformedConsent,,genomics
+39,InformedConsent acceptedTime,,InformedConsent,,genomics
+40,Answerset answersetAgreementDate,Answerset agreement date,Answerset,answerset agreement date,date and time-related information
+41,Answerset answersetStartedDate,,Answerset,,genomics
+42,Answerset answersetFinishedDate,,Answerset,,genomics
+43,Answerset isFirst,First answerset,Answerset,first answerset,genomics
+44,Answerset isLast,Last answerset,Answerset,last answerset,genomics
+45,Answerset visitNumber,answerset/visit number,Answerset,answerset visit number,routine clincial visits
+46,Answerset ageAtAgreement,age of answerset agreement date,Answerset,age answerset agreement date,age/birthdate
+47,Answerset ageGroupAtAgreement,,Answerset,,genomics
+48,Answerset questionnaireType,,Answerset,,genomics
+49,Answerset questionnaireForm,,Answerset,,genomics
+50,Answerset questionnaireLanguage,,Answerset,,genomics
+51,Answerset questionnaireStatus,,Answerset,,genomics
+52,Answerset agreementSigningTime,,Answerset,,genomics
+53,Answerset participationInResearchOther,,Answerset,,genomics
+54,Nationality nationality,Nationality,Nationality,nationality,genomics
+55,Nationality nationalityOther,,Nationality,,genomics
+56,Nationality motherTongue,Mother tongue,Nationality,mother tongue,genomics
+57,Nationality motherTongueOther,,Nationality,,genomics
+58,Education isStudying,,Education,,genomics
+59,Education highestEducationLevel,Higest level of education,Education,higest level education,education
+60,Education generalEducation,,Education,,genomics
+61,Work hasWorked3Months,,Work,,genomics
+62,Work isWorking,,Work,,genomics
+63,Work currentOccupation,,Work,,genomics
+64,Work currentOccupationType,,Work,,genomics
+65,Work hoursPerWeek,,Work,,genomics
+66,Work currentOccupationStartingYear,,Work,,genomics
+67,Work physActivityCurrentOccupation,,Work,,genomics
+68,Work isMainOccupation,,Work,,genomics
+69,Work mainOccupation,,Work,,genomics
+70,Work mainOccupationType,,Work,,genomics
+71,Work mainOccupationStartingYear,,Work,,genomics
+72,Work mainOccupationEndingYear,,Work,,genomics
+73,Work yearsInMainOccupation,,Work,,genomics
+74,Work physicalActivityMainOccupation,,Work,,genomics
+75,Work hoursPerWeekMainOccupation,,Work,,genomics
+76,Work reasonForNotWorking,,Work,,genomics
+77,SeveralReasonsForNotWorking unemployed,,Work,,genomics
+78,PhysicalActivities doesPhysicalExercise,,PhysicalActivities,,genomics
+79,PhysicalActivities hasDoneProfessionalSport,,PhysicalActivities,,genomics
+80,PhysicalActivities hasDoneProfessionalSportV1,,PhysicalActivities,,genomics
+81,PhysicalActivities hoursPerWeekPhysicalExercises,,PhysicalActivities,,genomics
+82,PhysicalActivities hoursPerDayPhyscalActivities,,PhysicalActivities,,genomics
+83,PhysicalExercise code,,PhysicalActivities,,genomics
+84,PhysicalExercise practicesNow,,PhysicalActivities,,genomics
+85,PhysicalExercise lastTrainingTime,,PhysicalActivities,,genomics
+86,PhysicalExercise timesPerWeek,,PhysicalActivities,,genomics
+87,PhysicalExercise lengthOfPractice,,PhysicalActivities,,genomics
+88,PhysicalExercise lengthOfPracticeMinutes,,PhysicalActivities,,genomics
+89,PhysicalExercise yearsOfPractice,,PhysicalActivities,,genomics
+90,ProfessionalSportPast code,,PhysicalActivities,,genomics
+91,ProfessionalSportPast yearsOfPractice,,PhysicalActivities,,genomics
+92,ProfessionalSport code,,PhysicalActivities,,genomics
+93,ProfessionalSport timesPerWeek,,PhysicalActivities,,genomics
+94,ProfessionalSport lengthOfPractice,,PhysicalActivities,,genomics
+95,ProfessionalSport lengthOfPracticeMinutes,,PhysicalActivities,,genomics
+96,ProfessionalSport yearsOfPractice,,PhysicalActivities,,genomics
+97,ProfessionalSport lastTrainingTime,,PhysicalActivities,,genomics
+98,SpareTimeActivities speedwalkingPerWeek,Speed walking,PhysicalActivities,speed walking,genomics
+99,SpareTimeActivities moderateWalkingPerWeek,Moderate speed walking,PhysicalActivities,moderate speed walking,genomics
+100,SpareTimeActivities slowWalkingPerWeek,Slow walking,PhysicalActivities,slow walking,genomics
+101,SpareTimeActivities makingFoodPerWeek,Making food,PhysicalActivities,making food,genomics
+102,SpareTimeActivities shoppingPerWeek,Shopping,PhysicalActivities,shopping,genomics
+103,SpareTimeActivities cleaningPerWeek,Cleaning,PhysicalActivities,cleaning,genomics
+104,SpareTimeActivities laundryPerWeek,Doing laundry and ironing,PhysicalActivities,laundry ironing,genomics
+105,SpareTimeActivities childcarePerWeek,Taking care of kids,PhysicalActivities,taking care kid,genomics
+106,SpareTimeActivities elderlyCarePerWeek,Taking care of the elderly or the disabled persons,PhysicalActivities,taking care elderly disabled person,genomics
+107,SpareTimeActivities gardeningPerWeek,Gardening or cleaning snow,PhysicalActivities,gardening cleaning snow,genomics
+108,SpareTimeActivities householdRepairPerWeek,Household repairworks,PhysicalActivities,household repairworks,family and household structure
+109,SpareTimeActivities physicalExercisePerWeek,Physical exercise,PhysicalActivities,physical exercise,physical environment
+110,SpareTimeActivities watchingTvPerWeek,Watching TV and movies,PhysicalActivities,watching tv movie,genomics
+111,SpareTimeActivities readingPerWeek,Reading,PhysicalActivities,reading,genomics
+112,SpareTimeActivities totalHours,,PhysicalActivities,,genomics
+113,EatingHabits coffeePerDay,,EatingHabits,,genomics
+114,EatingHabits teaPerDay,,EatingHabits,,genomics
+115,EatingHabits breadPerDay,,EatingHabits,,genomics
+116,EatingHabits whiteBreadPerDay,,EatingHabits,,genomics
+117,EatingHabits eatingHabit,,EatingHabits,,genomics
+118,EatingHabits addsSalt,,EatingHabits,,genomics
+119,EatingHabits eatingPreferences1,,EatingHabits,,genomics
+120,EatingHabits eatingPreferences2,,EatingHabits,,genomics
+121,EatingHabits eatingPreferences3,,EatingHabits,,genomics
+122,EatingHabits eatingPreferences4,,EatingHabits,,genomics
+123,EatingHabits eatingPreferences5,,EatingHabits,,genomics
+124,EatingHabits eatingPreferences6,,EatingHabits,,genomics
+125,EatingHabits eatingPreferences7,,EatingHabits,,genomics
+126,EatingHabits eatingPreferences8,,EatingHabits,,genomics
+127,EatingHabits eatingPreferences9,,EatingHabits,,genomics
+128,EatingHabits eatingPreferences10,,EatingHabits,,genomics
+129,EatingHabitsLastWeek foods,,EatingHabits,,genomics
+130,EatingHabitsLastWeek numberOfTimes,,EatingHabits,,genomics
+131,EatingHabitsLastWeek numberOfTimesPrecise,,EatingHabits,,genomics
+132,Smoking hasSmoked,,Smoking,,genomics
+133,Smoking hasSmokedRegularly,,Smoking,,genomics
+134,Smoking smokingRegularlyAge,,Smoking,,genomics
+135,Smoking yearsSmokedRegularly,,Smoking,,genomics
+136,Smoking hasSmokedLast12Months,,Smoking,,genomics
+137,Smoking yearsSmokedLikeLast12Months,,Smoking,,genomics
+138,Smoking smokingLastYearCharacteristic,,Smoking,,genomics
+139,Smoking smokingLastYearCharacteristicV1,,Smoking,,genomics
+140,Smoking yearLastSmoked,,Smoking,,genomics
+141,Smoking monthLastSmoked,,Smoking,,genomics
+142,Smoking yearCurrentAmount,,Smoking,,genomics
+143,Smoking monthCurrentAmount,,Smoking,,genomics
+144,Smoking yearsSmokedLikeUsually,,Smoking,,genomics
+145,Smoking majorSmokingPeriodStartingYear,,Smoking,,genomics
+146,Smoking majorSmokingPeriodStartingMonth,,Smoking,,genomics
+147,Smoking hasUsedChewingTobacco,,Smoking,,genomics
+148,Smoking hoursPerDayInSmokyRoom,,Smoking,,genomics
+149,Smoking smokeUnitLast12Months,,Smoking,,genomics
+150,Smoking smokeUnitUsually,,Smoking,,genomics
+151,Smoking smokeUnitLastMonth,,Smoking,,genomics
+152,Smoking smokeUnitYearBeforeQuitting,,Smoking,,genomics
+153,Smoking smokeUnitbeforeCurrentAmount,,Smoking,,genomics
+154,Smoking smokeUnitPackYears,,Smoking,,genomics
+155,Smoking smokingStatus,,Smoking,,genomics
+156,Smoking yearsSmokedTotal,,Smoking,,genomics
+157,TobaccoLast12Months smokeProd,tobacco product,Smoking,tobacco product,tobacco use history
+158,TobaccoLast12Months perDay,Times a day,Smoking,time day,date and time-related information
+159,TobaccoLast12Months perWeek,Times a week,Smoking,time week,date and time-related information
+160,TobaccoLast12Months perMonth,Times a month,Smoking,time month,date and time-related information
+161,TobaccoUsually smokeProd,tobacco product,Smoking,tobacco product,tobacco use history
+162,TobaccoUsually perDay,Times a day,Smoking,time day,date and time-related information
+163,TobaccoUsually perWeek,Times a week,Smoking,time week,date and time-related information
+164,TobaccoUsually perMonth,Times a month,Smoking,time month,date and time-related information
+165,TobaccoLastMonth smokeProd,tobacco product,Smoking,tobacco product,tobacco use history
+166,TobaccoLastMonth perDay,Times a day,Smoking,time day,date and time-related information
+167,TobaccoLastMonth perWeek,Times a week,Smoking,time week,date and time-related information
+168,TobaccoLastMonth perMonth,Times a month,Smoking,time month,date and time-related information
+169,TobaccoYearBeforeQuitting smokeProd,tobacco product,Smoking,tobacco product,tobacco use history
+170,TobaccoYearBeforeQuitting perDay,Times a day,Smoking,time day,date and time-related information
+171,TobaccoYearBeforeQuitting perWeek,Times a week,Smoking,time week,date and time-related information
+172,TobaccoYearBeforeQuitting perMonth,Times a month,Smoking,time month,date and time-related information
+173,TobaccoBeforeCurrentAmount smokeProd,tobacco product,Smoking,tobacco product,tobacco use history
+174,TobaccoBeforeCurrentAmount perDay,Times a day,Smoking,time day,date and time-related information
+175,TobaccoBeforeCurrentAmount perWeek,Times a week,Smoking,time week,date and time-related information
+176,TobaccoBeforeCurrentAmount perMonth,Times a month,Smoking,time month,date and time-related information
+177,Alcohol alcoholConsumptionStatus,,Alcohol,,genomics
+178,Alcohol alcoholConsumptionStyle,,Alcohol,,genomics
+179,Alcohol hasUsedAlcohol,,Alcohol,,genomics
+180,Alcohol ageOfFirstConsumption,,Alcohol,,genomics
+181,Alcohol frequencyOfConsumption,,Alcohol,,genomics
+182,Alcohol alcoholConsumptionLastYear,,Alcohol,,genomics
+183,Alcohol alcoholUnitPerDayLastYear,,Alcohol,,genomics
+184,Alcohol yearsUsedAlcoholLikeLastYear,,Alcohol,,genomics
+185,Alcohol alcoholUseLastYearCharacteristic,,Alcohol,,genomics
+186,Alcohol alcoholUnitPerDayUsually,,Alcohol,,genomics
+187,Alcohol yearsUsedAlcoholLikeUsually,,Alcohol,,genomics
+188,Alcohol yearsAlcoholUsedTotal,,Alcohol,,genomics
+189,Alcohol otherDrugs,,Alcohol,,genomics
+190,AlcoholUseFrequencyLastYear drinks,alcohol product,Alcohol,alcohol product,alcohol use history
+191,AlcoholUseFrequencyLastYear perDay,Times a day,Alcohol,time day,date and time-related information
+192,AlcoholUseFrequencyLastYear perWeek,Times a week,Alcohol,time week,date and time-related information
+193,AlcoholUseFrequencyLastYear perMonth,Times a month,Alcohol,time month,date and time-related information
+194,AlcoholUseFrequencyLastYear perYear,Times a year,Alcohol,time year,date and time-related information
+195,AlcoholUseFrequencyUsually drinks,alcohol product,Alcohol,alcohol product,alcohol use history
+196,AlcoholUseFrequencyUsually perDay,Times a day,Alcohol,time day,date and time-related information
+197,AlcoholUseFrequencyUsually perWeek,Times a week,Alcohol,time week,date and time-related information
+198,AlcoholUseFrequencyUsually perMonth,Times a month,Alcohol,time month,date and time-related information
+199,AlcoholUseFrequencyUsually perYear,Times a year,Alcohol,time year,date and time-related information
+200,AlcoholUseFrequencyLastMonth drinks,alcohol product,Alcohol,alcohol product,alcohol use history
+201,AlcoholUseFrequencyLastMonth perDay,Times a day,Alcohol,time day,date and time-related information
+202,AlcoholUseFrequencyLastMonth perWeek,Times a week,Alcohol,time week,date and time-related information
+203,AlcoholUseFrequencyLastMonth perMonth,Times a month,Alcohol,time month,date and time-related information
+204,AlcoholUseFrequencyLastMonth perYear,Times a year,Alcohol,time year,date and time-related information
+205,OtherDrugs hasUsedOtherDrugs,,OtherDrugs,,genomics
+206,OtherDrugs usingOtherDrugs,,OtherDrugs,,genomics
+207,OtherDrugs otherDrugs,,OtherDrugs,,genomics
+208,Narcotics psychoactiveDrugs,,OtherDrugs,,genomics
+209,Narcotics usedRegularity,,OtherDrugs,,genomics
+210,Sleep workInShiftsLast3Months,,Sleep,,genomics
+211,SleepWorkdays bedTime,,Sleep,,genomics
+212,SleepWorkdays preparingForSleepTime,,Sleep,,genomics
+213,SleepWorkdays minutesToFallAsleep,,Sleep,,genomics
+214,SleepWorkdays wakeupTime,,Sleep,,genomics
+215,SleepWorkdays wakeupAlarm,,Sleep,,genomics
+216,SleepWorkdays minutesToGetUp,,Sleep,,genomics
+217,SleepWorkdays timeSpentInDaylight,,Sleep,,genomics
+218,SleepDaysOff bedTime,,Sleep,,genomics
+219,SleepDaysOff preparingForSleepTime,,Sleep,,genomics
+220,SleepDaysOff minutesToFallAsleep,,Sleep,,genomics
+221,SleepDaysOff wakeupTime,,Sleep,,genomics
+222,SleepDaysOff wakeupAlarm,,Sleep,,genomics
+223,SleepDaysOff minutesToGetUp,,Sleep,,genomics
+224,SleepDaysOff timeSpentInDaylight,,Sleep,,genomics
+225,FemaleHealth menstruationsStarted,,FemaleHealth,,genomics
+226,FemaleHealth menstruationStartingAge,,FemaleHealth,,genomics
+227,FemaleHealth menstruationStartingAgeV1,,FemaleHealth,,genomics
+228,FemaleHealth lengthOfMenstrualCycle,,FemaleHealth,,genomics
+229,FemaleHealth lengthOfMenstrualCycleAge25to35,,FemaleHealth,,genomics
+230,FemaleHealth howLongUntilMensCycleRegularity,,FemaleHealth,,genomics
+231,FemaleHealth hasMenstruationsNow,,FemaleHealth,,genomics
+232,FemaleHealth lastMenstruationDate,,FemaleHealth,,genomics
+233,FemaleHealth avgCycleLength,,FemaleHealth,,genomics
+234,FemaleHealth ageMenstruationsStopped,,FemaleHealth,,genomics
+235,FemaleHealth menstruationsStopReason,For what reason did your menstrual cycle end?,FemaleHealth,reason menstrual cycle end?,genomics
+236,FemaleHealth menstruationsStopReasonOther,,FemaleHealth,,genomics
+237,FemaleHealth vaginalDischargesLastYear,,FemaleHealth,,genomics
+238,FemaleHealth vaginalDischargesCountLastYear,,FemaleHealth,,genomics
+239,FemaleHealth numOfMenstrualCyclesLastYear,,FemaleHealth,,genomics
+240,FemaleHealth hasBeenPregnant,,FemaleHealth,,genomics
+241,FemaleHealth numOfPregnancies,,FemaleHealth,,genomics
+242,FemaleHealth numOfLiveBirths,,FemaleHealth,,genomics
+243,FemaleHealth numOfMiscarriages,,FemaleHealth,,genomics
+244,FemaleHealth numOfAbortions,,FemaleHealth,,genomics
+245,FemaleHealth numOfOuteruterinePregnancies,,FemaleHealth,,genomics
+246,FemaleHealth numOfStillbirths,,FemaleHealth,,genomics
+247,FemaleHealth ageAtFirstPregnancy,,FemaleHealth,,genomics
+248,FemaleHealth ageAtLastPregnancy,,FemaleHealth,,genomics
+249,FemaleHealth hasHadInVitroFertilisation,,FemaleHealth,,genomics
+250,FemaleHealth numOfInVitroFertilisations,,FemaleHealth,,genomics
+251,FemaleHealth numOfLiveBirthsFromIvf,,FemaleHealth,,genomics
+252,FemaleHealth hasUsedHormonalContraceptives,,FemaleHealth,,genomics
+253,FemaleHealth hormonalContraceptiveStartingAge,,FemaleHealth,,genomics
+254,FemaleHealth hormonalContraceptivesPauses,,FemaleHealth,,genomics
+255,FemaleHealth isUsingHormonalContraceptives,,FemaleHealth,,genomics
+256,FemaleHealth hormonalContraceptiveStoppingAge,,FemaleHealth,,genomics
+257,FemaleHealth hasUsedHormonalMedDueToMenopause,,FemaleHealth,,genomics
+258,FemaleHealth hormonalMedMenopauseStartAge,,FemaleHealth,,genomics
+259,FemaleHealth hormonalMedMenopausePauses,,FemaleHealth,,genomics
+260,FemaleHealth isUsingHormonalMedDueToMenopause,,FemaleHealth,,genomics
+261,FemaleHealth hormonalMedMenopauseStopAge,,FemaleHealth,,genomics
+262,FemaleHealth totalNumOfPregnancies,,FemaleHealth,,genomics
+263,HormonalContraceptiveUsed code,,FemaleHealth,,genomics
+264,HormonalContraceptiveUsedV1 code,,FemaleHealth,,genomics
+265,HormonalMedicationMenopause code,,FemaleHealth,,genomics
+266,HormonalMedicationMenopauseV1 code,,FemaleHealth,,genomics
+267,MotherHealth menopauseStatus,,MotherHealth,,genomics
+268,MotherHealth ageAtMenopauseStarted,,MotherHealth,,genomics
+269,Health movement,,Health,,genomics
+270,Health selfcare,,Health,,genomics
+271,Health commonActivities,,Health,,genomics
+272,Health painDiscomfort,,Health,,genomics
+273,Health anxietyDepression,,Health,,genomics
+274,ObjectiveInformation height,,ObjectiveInformation,,genomics
+275,ObjectiveInformation weight,,ObjectiveInformation,,genomics
+276,ObjectiveInformation bmi,,ObjectiveInformation,,genomics
+277,ObjectiveInformation waist,,ObjectiveInformation,,genomics
+278,ObjectiveInformation hip,,ObjectiveInformation,,genomics
+279,ObjectiveInformation whr,,ObjectiveInformation,,genomics
+280,ObjectiveInformation naturalHairColor,,ObjectiveInformation,,genomics
+281,ObjectiveInformation naturalHairColorOther,,ObjectiveInformation,,genomics
+282,ObjectiveInformation eyeColor,,ObjectiveInformation,,genomics
+283,ObjectiveInformation eyeColorOther,,ObjectiveInformation,,genomics
+284,ObjectiveInformation dominatingHand,,ObjectiveInformation,,genomics
+285,ObjectiveInformation bloodPressureSystolic,,ObjectiveInformation,,genomics
+286,ObjectiveInformation bloodPressureDiastolic,,ObjectiveInformation,,genomics
+287,ObjectiveInformation bloodPressureSystolic2,,ObjectiveInformation,,genomics
+288,ObjectiveInformation bloodPressureDiastolic2,,ObjectiveInformation,,genomics
+289,ObjectiveInformation bloodPressureSystolic3,,ObjectiveInformation,,genomics
+290,ObjectiveInformation bloodPressureDiastolic3,,ObjectiveInformation,,genomics
+291,ObjectiveInformation bloodPressureMeasuring,,ObjectiveInformation,,genomics
+292,ObjectiveInformation pulse,,ObjectiveInformation,,genomics
+293,ObjectiveInformation isPulseRegular,,ObjectiveInformation,,genomics
+294,ObjectiveInformation pulse1,,ObjectiveInformation,,genomics
+295,ObjectiveInformation pulseRadial1,,ObjectiveInformation,,genomics
+296,ObjectiveInformation pulse2,,ObjectiveInformation,,genomics
+297,ObjectiveInformation pulseRadial2,,ObjectiveInformation,,genomics
+298,ObjectiveInformation pulse3,,ObjectiveInformation,,genomics
+299,ObjectiveInformation pulseRadial3,,ObjectiveInformation,,genomics
+300,ObjectiveInformation deviceNumber,,ObjectiveInformation,,genomics
+301,ObjectiveInformation bloodPressureTime,,ObjectiveInformation,,genomics
+302,ObjectiveInformation armCircumference,,ObjectiveInformation,,genomics
+303,ObjectiveInformation cuffSize,,ObjectiveInformation,,genomics
+304,ObjectiveInformation roomTemperature,,ObjectiveInformation,,genomics
+305,ObjectiveInformation hadDrinkIn4Hours,,ObjectiveInformation,,genomics
+306,ObjectiveInformation lastMeal,,ObjectiveInformation,,genomics
+307,ObjectiveInformation lastMealTime,,ObjectiveInformation,,genomics
+308,ObjectiveInformation heightMeasurement,,ObjectiveInformation,,genomics
+309,ObjectiveInformation weightMeasurement,,ObjectiveInformation,,genomics
+310,ObjectiveInformation waistHipMeasurement,,ObjectiveInformation,,genomics
+311,ObjectiveInformation ekgPerformed,,ObjectiveInformation,,genomics
+312,ObjectiveInformation ekgFindingsNormal,,ObjectiveInformation,,genomics
+313,ObjectiveInformation ekgPerformedCurrentVisit,,ObjectiveInformation,,genomics
+314,ObjectiveInformation automaticResultNormal,,ObjectiveInformation,,genomics
+315,ObjectiveInformation handGripStrengthMeasured,,ObjectiveInformation,,genomics
+316,ObjectiveInformation leftHandGrip1,,ObjectiveInformation,,genomics
+317,ObjectiveInformation rightHandGrip1,,ObjectiveInformation,,genomics
+318,ObjectiveInformation leftHandGrip2,,ObjectiveInformation,,genomics
+319,ObjectiveInformation leftHandGrip3,,ObjectiveInformation,,genomics
+320,ObjectiveInformation rightHandGrip2,,ObjectiveInformation,,genomics
+321,ObjectiveInformation rightHandGrip3,,ObjectiveInformation,,genomics
+322,ObjectiveInformation spirometryDone,,ObjectiveInformation,,genomics
+323,ObjectiveInformation usedMedicationsTroubleBreathing,,ObjectiveInformation,,genomics
+324,ObjectiveInformation asthmaHindranceLastMonth,,ObjectiveInformation,,genomics
+325,ObjectiveInformation asthmaTroubleBreathingLastMonth,,ObjectiveInformation,,genomics
+326,ObjectiveInformation asthmaNightLastMonth,,ObjectiveInformation,,genomics
+327,ObjectiveInformation asthmaMedicationLastMonth,,ObjectiveInformation,,genomics
+328,ObjectiveInformation asthmaUnderControlLastMonth,,ObjectiveInformation,,genomics
+329,ObjectiveInformation asthmaControlQuestionsAnswered,,ObjectiveInformation,,genomics
+330,MedicationsForTroubledBreathing code,,MedicationsForTroubledBreathing,,genomics
+331,MedicationsForTroubledBreathing medicineLastTaken,,MedicationsForTroubledBreathing,,genomics
+332,Diseases hasHadNoDiseases,,DiseasesDiagnosed,,genomics
+333,DiseasesDiagnosed code,,DiseasesDiagnosed,,genomics
+334,DiseasesDiagnosed hasThisDiseaseNow,,DiseasesDiagnosed,,genomics
+335,DiseasesDiagnosed dateOfDiagnose,,DiseasesDiagnosed,,genomics
+336,DiseasesDiagnosed reliabilityOfDiagnose,,DiseasesDiagnosed,,genomics
+337,MedicationsUsedForDisease code,,MedicationsUsedForDisease,,genomics
+338,MedicationsUsedForDisease drugPackageAndAtcCode,,MedicationsUsedForDisease,,genomics
+339,MedicationPackagesUsedForDisease code,,MedicationsUsedForDisease,,genomics
+340,ConcurrentDiagnoses code,,DiseasesDiagnosed,,genomics
+341,Tumors dateOfDiagnose,,DiseasesDiagnosed,,genomics
+342,Tumors hasBeenCured,,DiseasesDiagnosed,,genomics
+343,Tumors surgicalCure,,DiseasesDiagnosed,,genomics
+344,Tumors radiotherapyCure,,DiseasesDiagnosed,,genomics
+345,Tumors medicamentalCure,,DiseasesDiagnosed,,genomics
+346,Tumors hormoneTreatmentCure,,DiseasesDiagnosed,,genomics
+347,Tumors chemotherapyCure,,DiseasesDiagnosed,,genomics
+348,Tumors otherCure,,DiseasesDiagnosed,,genomics
+349,RespiratoryDiseases diagnosingDoctor,,DiseasesDiagnosed,,genomics
+350,RespiratoryDiseases spirographyPerformed,,DiseasesDiagnosed,,genomics
+351,RespiratoryDiseases spirographyFvc,,DiseasesDiagnosed,,genomics
+352,RespiratoryDiseases spirographyFev1,,DiseasesDiagnosed,,genomics
+353,RespiratoryDiseases spirographyFev1Fvc,,DiseasesDiagnosed,,genomics
+354,RespiratoryDiseases spirographyDate,,DiseasesDiagnosed,,genomics
+355,RespiratoryDiseases regularlyVisitsDoctor,,DiseasesDiagnosed,,genomics
+356,RespiratoryDiseases lastNameOfDoctor,,DiseasesDiagnosed,,genomics
+357,RespiratoryDiseasesMedications code,,DiseasesDiagnosed,,genomics
+358,Ostheoporosis boneUsDensitrometryPerformed,,DiseasesDiagnosed,,genomics
+359,Ostheoporosis boneUsDensitrometryTSector,,DiseasesDiagnosed,,genomics
+360,Ostheoporosis boneDxaDensitrometryPerformed,,DiseasesDiagnosed,,genomics
+361,Ostheoporosis boneDxaDensitrometryTScore,,DiseasesDiagnosed,,genomics
+362,Diabetes dateDiabetesDiagnosed,,DiseasesDiagnosed,,genomics
+363,Diabetes glycohemoglobinRate,,DiseasesDiagnosed,,genomics
+364,Diabetes glycohemoglobinDate,,DiseasesDiagnosed,,genomics
+365,Diabetes insulinOverallAmount,,DiseasesDiagnosed,,genomics
+366,Diabetes numOfInjectionsPerDay,,DiseasesDiagnosed,,genomics
+367,Diabetes relativesHadType2Diabetes,,DiseasesDiagnosed,,genomics
+368,Diabetes numOfRelativesWithType2Diabetes,,DiseasesDiagnosed,,genomics
+369,DiabetesComplications code,,DiseasesDiagnosed,,genomics
+370,DiabetesComplications reliabilityOfDiagnose,,DiseasesDiagnosed,,genomics
+371,DiabetesMedications code,,DiseasesDiagnosed,,genomics
+372,DiabetesProcedures code,,DiseasesDiagnosed,,genomics
+373,VisualDecadence leftEyeDioptry,,DiseasesDiagnosed,,genomics
+374,VisualDecadence rightEyeDioptry,,DiseasesDiagnosed,,genomics
+375,VisualDecadence leftEyeVisus,,DiseasesDiagnosed,,genomics
+376,VisualDecadence rightEyeVisus,,DiseasesDiagnosed,,genomics
+377,Hypertension donorInHypertensionReserach,,DiseasesDiagnosed,,genomics
+378,Hypertension dateHypertensionDiagnosed,,DiseasesDiagnosed,,genomics
+379,Hypertension bloodPressureSysBeforeTherapy,,DiseasesDiagnosed,,genomics
+380,Hypertension bloodPressureDiaBeforeTherapy,,DiseasesDiagnosed,,genomics
+381,Hypertension bloodPressureBeforeTherapyDate,,DiseasesDiagnosed,,genomics
+382,Hypertension medicationTherapyStartedWith,,DiseasesDiagnosed,,genomics
+383,Hypertension hypertensionGroup,,DiseasesDiagnosed,,genomics
+384,Hypertension otherMedicationDuringTherapy,,DiseasesDiagnosed,,genomics
+385,Hypertension hypertensionDiagnose,,DiseasesDiagnosed,,genomics
+386,Hypertension aceInhibitorSensitivity,,DiseasesDiagnosed,,genomics
+387,Hypertension bAdrenoblockerSensitivity,,DiseasesDiagnosed,,genomics
+388,Hypertension caAntagonistSensitivity,,DiseasesDiagnosed,,genomics
+389,Hypertension diureticSensitivity,,DiseasesDiagnosed,,genomics
+390,HypertensionFirstMedication bloodPressureSysFirstMedication,,DiseasesDiagnosed,,genomics
+391,HypertensionFirstMedication bloodPressureDiaFirstMedication,,DiseasesDiagnosed,,genomics
+392,HypertensionFirstMedication bloodPressureFirstMedicationDate,,DiseasesDiagnosed,,genomics
+393,HypertensionFirstMedication firstMedicationDose,,DiseasesDiagnosed,,genomics
+394,HypertensionFirstMedication firstMedicationHadSideEffects,,DiseasesDiagnosed,,genomics
+395,FirstMedicationSideEffects code,,DiseasesDiagnosed,,genomics
+396,HypertensionSubstituteMedication wasFirstMedicationSubstituted,,DiseasesDiagnosed,,genomics
+397,HypertensionSubstituteMedication firstMedicationSubstitute,,DiseasesDiagnosed,,genomics
+398,HypertensionSubstituteMedication bloodPressureSysSubMedication,,DiseasesDiagnosed,,genomics
+399,HypertensionSubstituteMedication bloodPressureDiaSubMedication,,DiseasesDiagnosed,,genomics
+400,HypertensionSubstituteMedication bloodPressureSubMedicationDate,,DiseasesDiagnosed,,genomics
+401,HypertensionSubstituteMedication susbstituteMedicationDose,,DiseasesDiagnosed,,genomics
+402,HypertensionSubstituteMedication subMedicationHadSideEffects,,DiseasesDiagnosed,,genomics
+403,SubstituteMedicationSideEffects code,,DiseasesDiagnosed,,genomics
+404,AdditionalMedication1 additionalMedication1Added,,DiseasesDiagnosed,,genomics
+405,AdditionalMedication1 additionalMedication,,DiseasesDiagnosed,,genomics
+406,AdditionalMedication1 systolicBloodPressureDiuretic,,DiseasesDiagnosed,,genomics
+407,AdditionalMedication1 diastolicBloodPressureDiuretic,,DiseasesDiagnosed,,genomics
+408,AdditionalMedication1 dateMeasuredDiuretic,,DiseasesDiagnosed,,genomics
+409,AdditionalMedication1 firstMedicationDose,,DiseasesDiagnosed,,genomics
+410,AdditionalMedication1 doseDiuretic,,DiseasesDiagnosed,,genomics
+411,AdditionalMedication1 systolicBloodPressureOther,,DiseasesDiagnosed,,genomics
+412,AdditionalMedication1 diastolicBloodPressureOther,,DiseasesDiagnosed,,genomics
+413,AdditionalMedication1 dateMeasuredOther,,DiseasesDiagnosed,,genomics
+414,AdditionalMedication1 doseOther,,DiseasesDiagnosed,,genomics
+415,SaltUsage lowSaltBeforeHtDiagnose,,DiseasesDiagnosed,,genomics
+416,SaltUsage lowSaltAfterHtDiagnose,,DiseasesDiagnosed,,genomics
+417,SaltUsage addsSaltBeforeHtDiagnose,,DiseasesDiagnosed,,genomics
+418,SaltUsage addsSaltAfterHtDiagnose,,DiseasesDiagnosed,,genomics
+419,PsaMeasurements psaLevelMeasured,,DiseasesDiagnosed,,genomics
+420,PsaMeasurements lastPsaLevel,,DiseasesDiagnosed,,genomics
+421,PsaMeasurements datePsaLastMeasured,,DiseasesDiagnosed,,genomics
+422,CardiovascularDiseasesAdditional echocardiogramPerformed,,DiseasesDiagnosed,,genomics
+423,CardiovascularDiseasesAdditional dateEchocardiogramPerformed,,DiseasesDiagnosed,,genomics
+424,CardiovascularDiseasesAdditional dateOfLastEcg,,DiseasesDiagnosed,,genomics
+425,CardiovascularDiseasesAdditional ejectionFractionPercent,,DiseasesDiagnosed,,genomics
+426,CardiovascularDiseasesAdditional leftVentricleHypertrophyPresent,,DiseasesDiagnosed,,genomics
+427,CardiovascularDiseasesAdditional cholesterolLevelMeasured,,DiseasesDiagnosed,,genomics
+428,CardiovascularDiseasesAdditional lastCholesterolLevelMeasured,,DiseasesDiagnosed,,genomics
+429,CardiovascularDiseasesAdditional lastCholesterolLevelMeasureDate,,DiseasesDiagnosed,,genomics
+430,CardiovascularDiseasesAdditional lastCholesterolValueOrigin,,DiseasesDiagnosed,,genomics
+431,CardiovascularDiseasesAdditional lastHdlCholesterolLevel,,DiseasesDiagnosed,,genomics
+432,CardiovascularDiseasesAdditional lastHdlCholesterolLevelDate,,DiseasesDiagnosed,,genomics
+433,CardiovascularDiseasesAdditional lastHdlCholesterolValueOrigin,,DiseasesDiagnosed,,genomics
+434,CardiovascularDiseasesAdditional lastLdlCholesterolLevel,,DiseasesDiagnosed,,genomics
+435,CardiovascularDiseasesAdditional lastLdlCholesterolLevelDate,,DiseasesDiagnosed,,genomics
+436,CardiovascularDiseasesAdditional lastLdlCholesterolValueOrigin,,DiseasesDiagnosed,,genomics
+437,CardiovascularDiseasesAdditional lastTriglyceridesLevel,,DiseasesDiagnosed,,genomics
+438,CardiovascularDiseasesAdditional lastTriglyceridesLevelDate,,DiseasesDiagnosed,,genomics
+439,CardiovascularDiseasesAdditional lastTriglyceridesValueOrigin,,DiseasesDiagnosed,,genomics
+440,CardiovascularDiseasesAdditional bloodsugarLevelMeasured,,DiseasesDiagnosed,,genomics
+441,CardiovascularDiseasesAdditional lastEmptyStomachBloodsugarLevel,,DiseasesDiagnosed,,genomics
+442,CardiovascularDiseasesAdditional lastEmptyStomachBloodsugarDate,,DiseasesDiagnosed,,genomics
+443,CardiovascularDiseasesAdditional lastEmptyBloodsugarValueOrigin,,DiseasesDiagnosed,,genomics
+444,CardiovascularDiseasesAdditional lastRegularBloodsugarLevel,,DiseasesDiagnosed,,genomics
+445,CardiovascularDiseasesAdditional lastRegularBloodsugarLevelDate,,DiseasesDiagnosed,,genomics
+446,CardiovascularDiseasesAdditional lastRegularBloodsugarValueOrigin,,DiseasesDiagnosed,,genomics
+447,CardiovascularDiseasesAdditional creatinineLevelMeasured,,DiseasesDiagnosed,,genomics
+448,CardiovascularDiseasesAdditional lastCreatinineLevel,,DiseasesDiagnosed,,genomics
+449,CardiovascularDiseasesAdditional lastCreatinineLevelDate,,DiseasesDiagnosed,,genomics
+450,CardiovascularDiseasesAdditional lastCreatinineValueOrigin,,DiseasesDiagnosed,,genomics
+451,Psoriasis donorInPsoriasisResearch,,DiseasesDiagnosed,,genomics
+452,Psoriasis psoriasisType,,DiseasesDiagnosed,,genomics
+453,Psoriasis psoriasisSeverity,,DiseasesDiagnosed,,genomics
+454,Psoriasis hasPsoriaticArthritis,,DiseasesDiagnosed,,genomics
+455,Psoriasis timesHospitalisedDueToPsoriasis,,DiseasesDiagnosed,,genomics
+456,Psoriasis hasHadPhototherapy,,DiseasesDiagnosed,,genomics
+457,PsoriaticArthritisType psorArt,,DiseasesDiagnosed,,genomics
+458,PsoriaticArthritisType occurrences,,DiseasesDiagnosed,,genomics
+459,PsoriaticArthritisType isMainType,,DiseasesDiagnosed,,genomics
+460,HypertensionOtherMedication otherMedication,,DiseasesDiagnosed,,genomics
+461,AdditionalQuestions healthState,,AdditionalQuestions,,genomics
+462,AdditionalQuestions isPremature,,AdditionalQuestions,,genomics
+463,RegularMedications code,,RegularMedications,,genomics
+464,SideEffectMedications code,,RegularMedications,,genomics
+465,SideEffectSymptoms code,,RegularMedications,,genomics
+466,SymptomsLastMonth code,,RegularMedications,,genomics
+467,SurgicalOperationsPerformed code,,SurgicalOperationsPerformed,,genomics
+468,DonorBirthMethods code,,DonorBirthMethods,,genomics
+469,Immunomodule coldFrequency,,Immunomodule,,genomics
+470,Immunomodule coldLast,,Immunomodule,,genomics
+471,Immunomodule antibacterialTreatment,,Immunomodule,,genomics
+472,Immunomodule chronicDisease,,Immunomodule,,genomics
+473,ChronicDisease code,,Immunomodule,,genomics
+474,PlaceOfBirth country,,PlaceOfBirth,,genomics
+475,PlaceOfBirth ehakCounty,,PlaceOfBirth,,genomics
