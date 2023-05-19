@@ -5,6 +5,8 @@ from werkzeug.utils import secure_filename
 from json import loads, dumps
 
 import harmonise.annotator
+from harmonise.match import get_match
+
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -27,6 +29,12 @@ def upload_file():
         file_path = 'uploads/' + secure_filename(f.filename)
         f.save(file_path)
         return read_file_and_convert_to_json(file_path)
+
+
+@app.route('/match/<path>', methods=['GET'])
+def field_match(path):
+    match_dict = get_match(file_path=path)
+    return match_dict
 
 
 def read_file_and_convert_to_json(file_path):
