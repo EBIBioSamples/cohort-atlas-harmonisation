@@ -2,7 +2,7 @@ from flask_cors import CORS, cross_origin
 import pandas as pd
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
-from json import loads, dumps
+import os
 
 import harmonise.annotator
 from harmonise.match import get_match
@@ -31,8 +31,13 @@ def upload_file():
         return read_file_and_convert_to_json(file_path)
 
 
-@app.route('/match/<path>', methods=['GET'])
-def field_match(path):
+@app.route('/match', methods=['GET'])
+def field_match():
+    path = request.args.get('path', type=str)
+
+    if not os.path.exists(path):
+        print(f"This file path is not exist: {path}")
+
     match_dict = get_match(file_path=path)
     return match_dict
 
@@ -66,7 +71,7 @@ def annotate_with_labels(file_path):
 if __name__ == '__main__':
     # run() method of Flask class runs the application
     # on the local development server.
-    app.run()
+    app.run(port=8081)
 
     # df = pd.read_csv('uploads/' + 'sample_labels_to_annotate.csv')
     # print(df.to_dict(orient='records'))

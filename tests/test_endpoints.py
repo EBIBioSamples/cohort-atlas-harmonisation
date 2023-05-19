@@ -3,7 +3,8 @@ import os
 
 
 def test_labels(file_path: str):
-    url = f"http://localhost:5000//match/{file_path}"
+
+    url = f"http://localhost:8081/match?path={file_path}"
 
     response = requests.get(url)
     status_code = response.status_code
@@ -12,7 +13,7 @@ def test_labels(file_path: str):
         outp_json = response.json()
         print(f"Response json is: {outp_json}")
     else:
-        print(f"Request failed with status code: {status_code}")
+        print(f"Request failed with status code: {status_code}; file path: {file_path}")
 
 
 if __name__ == '__main__':
