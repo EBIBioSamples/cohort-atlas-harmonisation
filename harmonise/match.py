@@ -1,4 +1,4 @@
-from .zooma import ZoomaClient
+from harmonise.zooma import ZoomaClient
 
 
 class FieldMatchingService:

@@ -1,12 +1,17 @@
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import pandas as pd
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
 import os
+import socket
+from dotenv import load_dotenv
 
 import harmonise.annotator
 from harmonise.match import get_match
 
+
+load_dotenv('./env.txt')
+H_PORT = int(os.getenv('H_PORT'))
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -67,15 +72,25 @@ def annotate_with_labels(file_path):
     return annotated_df
 
 
+def is_port_avaiable(port: int):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    outp = sock.connect_ex(('localhost', port))
+    sock.close()
+    return outp != 0
+
+
+def run_flask():
+    global H_PORT
+    global app
+
+    if is_port_avaiable(port=H_PORT):
+        app.run(port=H_PORT)
+    else:
+        print(f"Port {H_PORT} is already in use. Please, release the port")
+
+
 # main driver function
 if __name__ == '__main__':
     # run() method of Flask class runs the application
     # on the local development server.
-    app.run(port=8081)
-
-    # df = pd.read_csv('uploads/' + 'sample_labels_to_annotate.csv')
-    # print(df.to_dict(orient='records'))
-    # # result = df.to_json(orient="split")
-    # # parsed = loads(result)
-    # # json_dictionary = dumps(parsed, indent=4)
-    # # print(json_dictionary)
+    run_flask()
