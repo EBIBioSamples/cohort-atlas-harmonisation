@@ -4,7 +4,7 @@ import os
 
 def test_labels(file_path: str):
 
-    url = f"http://localhost:8081/match?path={file_path}"
+    url = f"http://localhost:3000/match?path={file_path}"
 
     response = requests.get(url)
     status_code = response.status_code

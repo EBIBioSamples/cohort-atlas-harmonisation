@@ -5,6 +5,7 @@ from werkzeug.utils import secure_filename
 import os
 import socket
 from dotenv import load_dotenv
+import psutil
 
 import harmonise.annotator
 from harmonise.match import get_match
@@ -14,6 +15,7 @@ load_dotenv('./env.txt')
 H_PORT = int(os.getenv('H_PORT'))
 
 app = Flask(__name__)
+app.config['ENV'] = 'production'
 cors = CORS(app)
 
 
@@ -84,9 +86,15 @@ def run_flask():
     global app
 
     if is_port_avaiable(port=H_PORT):
-        app.run(port=H_PORT)
+        app.run(host='0.0.0.0', port=H_PORT, debug=False)
     else:
         print(f"Port {H_PORT} is already in use. Please, release the port")
+        for proc in psutil.process_iter(['pid', 'name']):
+            connections = proc.connections()
+            for conn in connections:
+                if conn.status == psutil.CONN_LISTEN and conn.laddr.port == H_PORT:
+                    print(f"Process is: {proc}")
+                    break
 
 
 # main driver function
