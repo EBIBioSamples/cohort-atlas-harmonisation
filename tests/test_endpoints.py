@@ -4,6 +4,10 @@ import os
 
 def test_labels(file_path: str):
 
+    if not os.path.exists(file_path):
+        print(f"This file doesn't exist: {file_path}")
+        return dict()
+
     url = f"http://localhost:3000/match?path={file_path}"
 
     response = requests.get(url)
@@ -13,9 +17,11 @@ def test_labels(file_path: str):
         outp_json = response.json()
         print(f"Response json is: {outp_json}")
     else:
+        outp_json = dict()
         print(f"Request failed with status code: {status_code}; file path: {file_path}")
+
+    return outp_json
 
 
 if __name__ == '__main__':
-    current_dir = os.getcwd()
-    test_labels(file_path=f"{current_dir}/sample_labels_to_annotate.csv")
+    test_labels(file_path=f"/app/shared/sample_labels_to_annotate.csv")
