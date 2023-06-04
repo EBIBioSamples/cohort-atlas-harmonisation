@@ -8,9 +8,13 @@ def test_labels(file_path: str):
         print(f"This file doesn't exist: {file_path}")
         return dict()
 
-    url = f"http://localhost:3000/match?path={file_path}"
+    params = {
+        'path': file_path
+    }
 
-    response = requests.get(url)
+    url = f"http://localhost:3000/match"
+
+    response = requests.get(url, params)
     status_code = response.status_code
 
     if status_code == 200:
