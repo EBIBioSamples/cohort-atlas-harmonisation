@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./env.txt
+source ./env
 
 lsof -i tcp:${EXT_PORT} | grep LISTEN
 

@@ -11,8 +11,8 @@ import harmonise.annotator
 from harmonise.match import get_match
 
 
-load_dotenv('./env.txt')
-H_PORT = int(os.getenv('H_PORT'))
+load_dotenv('./env')
+FLASK_PORT = int(os.getenv('FLASK_PORT'))
 
 app = Flask(__name__)
 app.config['ENV'] = 'production'
@@ -82,17 +82,17 @@ def is_port_avaiable(port: int):
 
 
 def run_flask():
-    global H_PORT
+    global FLASK_PORT
     global app
 
-    if is_port_avaiable(port=H_PORT):
-        app.run(host='0.0.0.0', port=H_PORT, debug=False)
+    if is_port_avaiable(port=FLASK_PORT):
+        app.run(host='0.0.0.0', port=FLASK_PORT, debug=False)
     else:
-        print(f"Port {H_PORT} is already in use. Please, release the port")
+        print(f"Port {FLASK_PORT} is already in use. Please, release the port")
         for proc in psutil.process_iter(['pid', 'name']):
             connections = proc.connections()
             for conn in connections:
-                if conn.status == psutil.CONN_LISTEN and conn.laddr.port == H_PORT:
+                if conn.status == psutil.CONN_LISTEN and conn.laddr.port == FLASK_PORT:
                     print(f"Process is: {proc}")
                     break
 

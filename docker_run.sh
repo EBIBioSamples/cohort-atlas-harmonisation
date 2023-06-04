@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source ./env.txt
+source ./env
 
 docker build -t cohort-atlas-harmonisation .
 
-lsof -i :${H_PORT}
+lsof -i :${FLASK_PORT}
 
-docker run -d -p ${EXT_PORT}:${H_PORT} -v $(pwd)/shared:/app/shared --name coh-atlas cohort-atlas-harmonisation
+docker run -d -p ${EXT_PORT}:${FLASK_PORT} -v $(pwd)/shared:/app/shared --name coh-atlas cohort-atlas-harmonisation
