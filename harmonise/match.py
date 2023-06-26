@@ -2,20 +2,20 @@ from harmonise.zooma import ZoomaClient
 
 
 class FieldMatchingService:
-    
+
     field_dict = {
         'propertyValue': None,
         'semanticTags': None,
         'confidence': None
     }
-    
+
     def __init__(self):
         pass
-    
-    def get_match(self, url):    
+
+    def get_match(self, url):
         z_cl = ZoomaClient()
         resp_json = z_cl.get_json(url=url)
-        
+
         if resp_json is not None:
             for i in range(len(resp_json)):
                 el = resp_json[i]
@@ -27,7 +27,7 @@ class FieldMatchingService:
                     print(e)
 
         return self.field_dict
-    
+
 
 def get_match(file_path: str):
     match_dict = dict()

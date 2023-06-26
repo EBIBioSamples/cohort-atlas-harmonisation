@@ -38,15 +38,18 @@ def upload_file():
         return read_file_and_convert_to_json(file_path)
 
 
-@app.route('/match', methods=['GET'])
+@app.route('/match', methods=['POST'])
 def field_match():
-    path = request.args.get('path', type=str)
+    if 'file' not in request.files:
+        raise Exception(422, f"No file found in the request")
 
-    if not os.path.exists(path):
-        print(f"This file path is not exist: {path}")
+    file = request.files['file']
+    filepath = f'uploads/{file.filename}'
 
-    match_dict = get_match(file_path=path)
-    return match_dict
+    if not os.path.exists(filepath):
+        raise Exception(400, f"This file doesn't exist: {filepath}")
+
+    return get_match(file_path=filepath)
 
 
 def read_file_and_convert_to_json(file_path):

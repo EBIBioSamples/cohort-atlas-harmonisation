@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8081:3000
+      - ${EXT_PORT}:${FLASK_PORT}
     volumes:
       - ./shared:/app/shared
+    env_file:
+      - .env
