@@ -6,11 +6,9 @@ This module is responsible for performing operations to harmonize or reconcilate
 the datasets, in order to further create cohorts that can be analyzed as a single 
 group in researches.
 
-For running this module locally (http://localhost:8081) launch:<br>
-sh ./docker_run.sh
-
-For releasing the external 8081 port launch:<br>
-sh ./release_port.sh
+For launch and down of this module:
+docker-compose up --build -d
+docker-compose down
 
 Internal and external ports are set in the evn.txt file in the root module directory: <br>
 H_PORT=3000<br>
