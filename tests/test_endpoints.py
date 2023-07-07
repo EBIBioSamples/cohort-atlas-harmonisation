@@ -1,6 +1,8 @@
 import requests
 import os
 from dotenv import load_dotenv
+from itertools import islice
+import pytest
 
 load_dotenv('./env')
 FLASK_PORT = int(os.getenv('FLASK_PORT'))
@@ -22,6 +24,29 @@ def test_labels(file_path: str):
     else:
         outp_json = dict()
         print(f"Request failed with status code: {response.status_code}; file path: {file_path}")
+
+    assert len(outp_json) > 0, "Empty json"
+    assert len(outp_json) == 29, "Wrong size json"
+
+    first_5_elements = dict(islice(outp_json.items(), 5))
+
+    expected_values = {
+        'Age at present': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
+                           'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
+        'Age at the agreement date': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
+                                      'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
+        'Agreement date': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
+                           'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
+        'Alcohol consumption habits': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
+                                       'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
+        'Birthdate': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
+                      'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']}
+    }
+
+    for key, value in first_5_elements.items():
+        assert key in expected_values, f"Unexpected key in json: {key}"
+        assert value == expected_values[key], f"Unexpected value for key {key} in json. " \
+                                              f"Expected: {expected_values[key]}. Got: {value}"
 
     return outp_json
 

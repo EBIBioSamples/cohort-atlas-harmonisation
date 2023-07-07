@@ -1,12 +1,29 @@
-id,name,label,description,type,values,parent,annotations,tags
-id_1,Gender,Gender,Gender,string,"MALE, FEMALE, OTHER",,,
-id_2,Birthdate,Birthdate,Birthdate,string,,,,
-id_3,Year of birth,Year of birth,Year of birth,string,,,,
-id_4,Agreement date,Agreement date,Agreement date,string,,,,
-id_5,Age at present,Age at present,Age at present,string,,,,
-
-
-
-
-
-
+LABELS
+Gender
+Birthdate
+Year of birth
+Agreement date
+Age at present
+Age at the agreement date
+Date of death
+Year of death
+Last BMI value
+Last weight value
+Last height value
+The date of last weight, height and BMI measurement
+Last bmi value source
+Last smoking status
+Date of last smoking report
+Last smoking status source
+Last status of alcohol consumption
+Alcohol consumption habits
+Daily alcohol consumption during the last year (1 unit = 10 g of pure alcohol)
+Date of last report of alcohol consumption
+Nationality
+Last education
+The date of the last education
+Last education source
+Country of residence
+County of residence
+City of residence
+Settlement region type
