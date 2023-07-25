@@ -1,12 +1,21 @@
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 import pandas as pd
 from flask import Flask, render_template, request
 from werkzeug.utils import secure_filename
-from json import loads, dumps
+import os
+import socket
+from dotenv import load_dotenv
+import psutil
 
 import harmonise.annotator
+from harmonise.match import get_match
+
+
+load_dotenv('./env')
+FLASK_PORT = int(os.getenv('FLASK_PORT'))
 
 app = Flask(__name__)
+app.config['ENV'] = 'production'
 cors = CORS(app)
 
 
@@ -27,6 +36,20 @@ def upload_file():
         file_path = 'uploads/' + secure_filename(f.filename)
         f.save(file_path)
         return read_file_and_convert_to_json(file_path)
+
+
+@app.route('/match', methods=['POST'])
+def field_match():
+    if 'file' not in request.files:
+        raise Exception(422, f"No file found in the request")
+
+    file = request.files['file']
+    filepath = f'uploads/{file.filename}'
+
+    if not os.path.exists(filepath):
+        raise Exception(400, f"This file doesn't exist: {filepath}")
+
+    return get_match(file_path=filepath)
 
 
 def read_file_and_convert_to_json(file_path):
@@ -54,15 +77,31 @@ def annotate_with_labels(file_path):
     return annotated_df
 
 
+def is_port_avaiable(port: int):
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    outp = sock.connect_ex(('localhost', port))
+    sock.close()
+    return outp != 0
+
+
+def run_flask():
+    global FLASK_PORT
+    global app
+
+    if is_port_avaiable(port=FLASK_PORT):
+        app.run(host='0.0.0.0', port=FLASK_PORT, debug=False)
+    else:
+        print(f"Port {FLASK_PORT} is already in use. Please, release the port")
+        for proc in psutil.process_iter(['pid', 'name']):
+            connections = proc.connections()
+            for conn in connections:
+                if conn.status == psutil.CONN_LISTEN and conn.laddr.port == FLASK_PORT:
+                    print(f"Process is: {proc}")
+                    break
+
+
 # main driver function
 if __name__ == '__main__':
     # run() method of Flask class runs the application
     # on the local development server.
-    app.run()
-
-    # df = pd.read_csv('uploads/' + 'sample_labels_to_annotate.csv')
-    # print(df.to_dict(orient='records'))
-    # # result = df.to_json(orient="split")
-    # # parsed = loads(result)
-    # # json_dictionary = dumps(parsed, indent=4)
-    # # print(json_dictionary)
+    run_flask()

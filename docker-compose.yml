@@ -1,0 +1,13 @@
+version: '3'
+services:
+  myapp:
+    image: cohort-atlas-harmonisation
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${EXT_PORT}:${FLASK_PORT}
+    volumes:
+      - ./shared:/app/shared
+    env_file:
+      - .env

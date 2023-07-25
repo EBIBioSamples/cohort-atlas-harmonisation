@@ -1,6 +1,12 @@
 import re
 
 import pandas as pd
+
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
