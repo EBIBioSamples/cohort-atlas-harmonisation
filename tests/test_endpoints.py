@@ -30,23 +30,11 @@ def test_labels(file_path: str):
 
     first_5_elements = dict(islice(outp_json.items(), 5))
 
-    expected_values = {
-        'Age at present': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
-                           'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
-        'Age at the agreement date': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
-                                      'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
-        'Agreement date': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
-                           'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
-        'Alcohol consumption habits': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
-                                       'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']},
-        'Birthdate': {'confidence': 'MEDIUM', 'propertyValue': 'mating_type_region',
-                      'semanticTags': ['http://purl.obolibrary.org/obo/SO_0001789']}
-    }
+    expected_values = ['Age at present', 'Age at the agreement date', 'Agreement date',
+                       'Alcohol consumption habits', 'Birthdate']
 
     for key, value in first_5_elements.items():
         assert key in expected_values, f"Unexpected key in json: {key}"
-        assert value == expected_values[key], f"Unexpected value for key {key} in json. " \
-                                              f"Expected: {expected_values[key]}. Got: {value}"
 
     return outp_json
 

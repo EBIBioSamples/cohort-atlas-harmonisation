@@ -10,9 +10,9 @@ For launch and down of this module:
 docker-compose up --build -d
 docker-compose down
 
-Internal and external ports are set in the evn.txt file in the root module directory: <br>
-H_PORT=3000<br>
-EXT_PORT=8081
+Internal (FLASK_PORT) and external (EXT_PORT) ports are set in the evn file in the root module directory: <br>
+EXT_PORT=8081<br>
+FLASK_PORT=3001
 
 Another product of EBI, named ZOOMA, is used in this module.
 ZOOMA maps text to ontology terms based on curated mappings from selected datasources 
@@ -30,5 +30,5 @@ Year of birth<br>
 Agreement date<br>
 Age at present<br>
 
-This endpoint uses ZOOMA by this way:
+This endpoint uses ZOOMA in this way:
 http://www.ebi.ac.uk/spot/zooma/v2/api/services/annotate?propertyValue={label}
