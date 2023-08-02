@@ -1,8 +1,7 @@
-from flask_cors import CORS, cross_origin
 import pandas as pd
 from flask import Flask, render_template, request
+from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from json import loads, dumps
 
 import harmonise.annotator
 
@@ -11,22 +10,66 @@ cors = CORS(app)
 
 
 @app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+def health():
+    return {"status": "up"}
 
 
-@app.route('/upload')
+@app.route('/harmonise', methods=['GET', 'POST'])
 def upload():
-    return render_template('upload.html')
-
-
-@app.route('/uploader', methods=['GET', 'POST'])
-def upload_file():
+    if request.method == 'GET':
+        return render_template('harmonise.html')
     if request.method == 'POST':
-        f = request.files['file']
-        file_path = 'uploads/' + secure_filename(f.filename)
-        f.save(file_path)
-        return read_file_and_convert_to_json(file_path)
+        return harmonise_dictionary()
+
+
+def harmonise_dictionary():
+    if request.is_json:
+        return harmonise_dictionary_json()
+    else:
+        return harmonise_dictionary_file()
+
+
+def harmonise_dictionary_file():
+    f = request.files['file']
+    file_path = 'uploads/' + secure_filename(f.filename)
+    f.save(file_path)
+    return read_file_and_convert_to_json(file_path)
+
+
+def harmonise_dictionary_json():
+    cohort = request.get_json()  # force=true?
+    cohort_name = cohort['name']
+    cohort_dictionary = cohort['dictionary']
+
+    df = pd.DataFrame(cohort_dictionary)
+    file_path = 'uploads/' + secure_filename(cohort_name) + '.csv'
+    df.to_csv(file_path, index=False)
+
+    return read_file_and_convert_to_json(file_path)
+
+
+# @app.route('/uploader', methods=['GET', 'POST'])
+# def upload_file():
+#     if request.method == 'POST':
+#         f = request.files['file']
+#         file_path = 'uploads/' + secure_filename(f.filename)
+#         f.save(file_path)
+#         return read_file_and_convert_to_json(file_path)
+#
+#
+# @app.route('/uploader_json', methods=['POST'])
+# def upload_file_json():
+#     print(request.form)
+#     print(request.is_json)
+#     cohort = request.get_json()  # force=true?
+#     cohort_name = cohort['name']
+#     cohort_dictionary = cohort['dictionary']
+#
+#     df = pd.DataFrame(cohort_dictionary)
+#     file_path = 'uploads/' + secure_filename(cohort_name) + '.csv'
+#     df.to_csv(file_path, index=False)
+#
+#     return read_file_and_convert_to_json(file_path)
 
 
 def read_file_and_convert_to_json(file_path):
@@ -39,11 +82,11 @@ def read_file_and_convert_to_json(file_path):
     # return json_dictionary
 
     annotated_df = annotate_with_labels(file_path)
-    df["annotations"] = annotated_df["CLASS"]
+    df["suggestions"] = annotated_df["CLASS"]
 
     annotations = df.to_dict(orient='records')
     for record in annotations:
-        record["annotations"] = [record["annotations"]]
+        record["suggestions"] = [record["suggestions"]]
 
     return annotations
 
@@ -58,7 +101,7 @@ def annotate_with_labels(file_path):
 if __name__ == '__main__':
     # run() method of Flask class runs the application
     # on the local development server.
-    app.run()
+    app.run(host='0.0.0.0', port=9000, debug=False)
 
     # df = pd.read_csv('uploads/' + 'sample_labels_to_annotate.csv')
     # print(df.to_dict(orient='records'))
