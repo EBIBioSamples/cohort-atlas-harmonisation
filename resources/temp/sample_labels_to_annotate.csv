@@ -1,0 +1,6 @@
+name,label,description,type,values,parent,suggestions,annotation,tags
+Gender,Gender,Gender,string,"MALE, FEMALE, OTHER",,,,
+Birthdate,Birthdate,Birthdate,string,,,,,
+Year of birth,Year of birth,Year of birth,string,,,,,
+Agreement date,Agreement date,Agreement date,string,,,,,
+Age at present,Age at present,Age at present,string,,,,,
