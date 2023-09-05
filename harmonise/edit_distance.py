@@ -3,7 +3,7 @@ import wordninja
 import pandas as pd
 
 
-standard_terms_df = pd.read_csv('../resources/standard_terms.tsv', sep='\t', header=0)
+standard_terms_df = pd.read_csv('../resources/temp/standard_terms.tsv', sep='\t', header=0)
 print(standard_terms_df.head())
 
 df = standard_terms_df
@@ -51,3 +51,4 @@ def clean_terms(terms):
 
 
 get_nearest_mapping("alcohol use hist")
+print(wordninja.split("AlcoholUseHistory"))

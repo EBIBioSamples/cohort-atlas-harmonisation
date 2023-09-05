@@ -161,4 +161,6 @@ cython_debug/
 
 
 .idea
-resources/FW_ Madiva Data templates
+resources/uploads
+build
+dist
